@@ -7,7 +7,7 @@ public class List {
     public  ArrayList<String> Shoes = new ArrayList<>();
 
     public void setOwner(String name){
-        this.owner=name;
+        this.owner=name+"Owns the Following shoes: \n";
     }
 
     public String getOwner(){
@@ -15,14 +15,13 @@ public class List {
 
     }
 
-    public void setShoes(String brandname){
-        this.Shoes.add(brandname);
+    public void setShoes(String brand_name){
+        this.Shoes.add(brand_name);
     }
 
-    /*public String getShoes(String good){
-        return good;
-    }*/ 
-
+    // we need to call it public ArrayList inorder to be able to print the array list
+    //otherwise we can't be able to print it (for example if we call it
+    // public String getShoes() the function return shoes will be error)
     public ArrayList getShoes(){
         return Shoes;
     }
